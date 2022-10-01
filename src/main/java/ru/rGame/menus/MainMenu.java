@@ -17,7 +17,7 @@ public class MainMenu extends Menu {
     @Override
     public void use() {
         switch (getActiveName()) {
-            //case "MM_Exit": {javafx.application.Platform.exit(); break;}
+            case "MM_Exit": {javafx.application.Platform.exit(); break;}
             case "MM_Start": {
                 RGame.getInstance().startNewGame();
                 break;
