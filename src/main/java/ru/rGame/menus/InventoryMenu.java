@@ -5,7 +5,7 @@ import ru.rGame.*;
 import ru.rGame.objects.ItemObject;
 
 public class InventoryMenu extends Menu implements Escapeable {
-    private Inventory inventory;
+    private final Inventory inventory;
 
     public InventoryMenu(Inventory inventory) {
         super(3, 5);

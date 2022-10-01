@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Inventory {
-    private int size = 5;
     public Armor armor;
     public Weapon weapon;
     public List<ItemObject> inventory = new ArrayList<>();
@@ -50,6 +49,7 @@ public class Inventory {
     }
 
     public int getSize() {
+        int size = 5;
         return size;
     }
 }

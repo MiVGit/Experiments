@@ -10,7 +10,7 @@ import ru.rGame.enums.ObjectTypes;
 public class Armor extends ItemObject{
     private final ObjectTypes ownerType;
     private int strength=0;
-    private int dextery=0;
+    private int dexterity =0;
     private int vitality=0;
     private final int defence;
     private final String[] NAMES_H = {
@@ -61,7 +61,7 @@ public class Armor extends ItemObject{
             info = info+" "+TYPES[1][RGame.random(TYPES[1].length-1)];
         }
         else if (roll<=82) {
-            this.dextery = RGame.random(level)+1;
+            this.dexterity = RGame.random(level)+1;
             info = info+" "+TYPES[2][RGame.random(TYPES[2].length-1)];
         }
         else {
@@ -81,7 +81,7 @@ public class Armor extends ItemObject{
         Screen.getInstance().label(3, p, Color.DARKGRAY,"Уровень "+level,Color.BLACK);
         Screen.getInstance().label(3, p+=1, Color.DARKGRAY,"Защита "+defence,Color.BLACK);
         Screen.getInstance().label(3, p+=1, Color.DARKGRAY,"Сила + "+strength,Color.BLACK);
-        Screen.getInstance().label(3, p+=1, Color.DARKGRAY,"Ловкость + "+dextery,Color.BLACK);
+        Screen.getInstance().label(3, p+=1, Color.DARKGRAY,"Ловкость + "+ dexterity,Color.BLACK);
         Screen.getInstance().label(3, p+=1, Color.DARKGRAY,"Выносливость + "+vitality,Color.BLACK);
         Screen.getInstance().label(3, p+=1, Color.DARKGRAY,"Носит "+ownerType.toString(),Color.BLACK);
     }
@@ -117,8 +117,8 @@ public class Armor extends ItemObject{
         return strength;
     }
 
-    public int getDextery() {
-        return dextery;
+    public int getDexterity() {
+        return dexterity;
     }
 
     public int getVitality() {

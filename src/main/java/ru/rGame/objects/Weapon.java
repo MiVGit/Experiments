@@ -8,11 +8,11 @@ import ru.rGame.Screen;
 import ru.rGame.enums.ObjectTypes;
 
 public class Weapon extends ItemObject{
-    private ObjectTypes ownerType;
+    private final ObjectTypes ownerType;
     private int strength=0;
     private int dextery=0;
     private int vitality=0;
-    private int damage;
+    private final int damage;
     private final String[] NAMES_H = {
             "Колобашка",
             "Половник",

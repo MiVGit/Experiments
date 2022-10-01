@@ -20,7 +20,7 @@ public class BattleManager {
     private final String DIVIDER = ".......................";
     private Person opponent;
     private int battleTurn;
-    private Menu battleLog = new BattleLog();
+    private final Menu battleLog = new BattleLog();
     private int order;
     private int damage;
 

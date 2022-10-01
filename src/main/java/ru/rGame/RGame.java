@@ -30,7 +30,7 @@ public class RGame extends Game {
     private boolean bossDefeated = false;
     private boolean keyPressed = false;
     private static RGame instance;
-    private Message message = new Message();
+    private final Message message = new Message();
 
     GameStates state;
     List<Menu> menus = new ArrayList<>();
@@ -115,8 +115,6 @@ public class RGame extends Game {
 
     public void fight(Person opponent) {
         //Переход в состояние битвы
-        //setMessage(SCREEN_WIDTH/2, SCREEN_HEIGHT-1, "Начался бой!");
-        //showMessage();
         state = GameStates.BATTLE;
         battleScreen(opponent);
     }

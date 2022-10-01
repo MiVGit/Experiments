@@ -7,8 +7,8 @@ import ru.rGame.enums.TileType;
 public class Tile {
     public static final Color WALL_COLOR = Color.GRAY;
     public static final Color FLOOR_COLOR = Color.DARKGRAY;
-    private int x;
-    private int y;
+    private final int x;
+    private final int y;
     private TileType type;
 
     public Tile(int x, int y, TileType type) {

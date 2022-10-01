@@ -17,7 +17,7 @@ import java.util.List;
 
 public class LevelManager {
     public MapLevel mapLevel = new MapLevel();
-    private ListMenu listMenu = new ListMenu("Здесь:");
+    private final ListMenu listMenu = new ListMenu("Здесь:");
     public int currentLevel=1;
     private int lastLevel;
     private Gate upLadder;
@@ -25,9 +25,9 @@ public class LevelManager {
     private GameObject currentInteractionObject;
     private List<GameObject> objectsInTile;
     Player player = Player.getInstance();
-    private List<GameObject> gameObjects = new ArrayList<>();
+    private final List<GameObject> gameObjects = new ArrayList<>();
     private static LevelManager instance;
-    private HealthBar healthBar = new HealthBar();
+    private final HealthBar healthBar = new HealthBar();
 
     private LevelManager() {}
 

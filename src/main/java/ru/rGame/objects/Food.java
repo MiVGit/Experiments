@@ -11,7 +11,7 @@ import java.util.List;
 
 public class Food extends Consumable{
     private int nutrition;
-    private List<Foods> foods = new ArrayList<>();
+    private final List<Foods> foods = new ArrayList<>();
 
     public Food(int level, int x, int y) {
         super(ObjectTypes.FOOD, level, x, y);

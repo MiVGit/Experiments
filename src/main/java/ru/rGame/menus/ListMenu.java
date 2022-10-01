@@ -7,7 +7,7 @@ import ru.rGame.RGame;
 import ru.rGame.Screen;
 
 public class ListMenu extends Menu implements Escapeable {
-    private String title;
+    private final String title;
 
     public ListMenu(String title) {
         super(RGame.SCREEN_WIDTH-11, 12);

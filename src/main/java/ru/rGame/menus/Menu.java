@@ -17,8 +17,8 @@ public abstract class Menu {
     private int menuIndex = 0;
     private int offset;
     private int linesCount = 4;
-    private int x;
-    private int y;
+    private final int x;
+    private final int y;
     private boolean active = false;
 
     public Menu (int x, int y) {
@@ -38,7 +38,7 @@ public abstract class Menu {
         String uText = genMenuItem("^");
         String dText = genMenuItem("v");
         Color textColor = active?menuTextColor:menuTextColorInactive;
-        int count = menuItems.size()>linesCount? linesCount:menuItems.size();
+        int count = Math.min(menuItems.size(), linesCount);
         for (int i=offset; i<count+offset; i++) {
             if (i==menuIndex&&active) {
                 Screen.getInstance().label(x, y+i-offset, menuColorChecked, menuItems.get(i)[1], textColor);
@@ -56,7 +56,7 @@ public abstract class Menu {
             case UP: {
                 if (menuIndex==0) {
                     menuIndex = menuItems.size()-1;
-                    int count = menuItems.size()>linesCount? linesCount:menuItems.size();
+                    int count = Math.min(menuItems.size(), linesCount);
                     offset = menuItems.size()-count;
                 }
                 else menuIndex--;
@@ -76,7 +76,7 @@ public abstract class Menu {
     }
 
     private String genMenuItem(String ch) {
-        String str="";
+        StringBuilder str= new StringBuilder();
         String maxItem="";
         for (String[] item:menuItems) {
             if (item[1].length()>maxItem.length()) {maxItem = item[1];}
@@ -84,14 +84,14 @@ public abstract class Menu {
         if (ch.length()>maxItem.length()) {return ch;}
         else {
             for (int i = 0; i < (maxItem.length()-ch.length())/2; i++) {
-                str = str+" ";
+                str.append(" ");
             }
-            str = str + ch;
+            str.append(ch);
             for (int i = str.length(); i < maxItem.length(); i++) {
-                str = str+" ";
+                str.append(" ");
             }
         }
-        return str;
+        return str.toString();
     }
 
     public void setActive(boolean active) {

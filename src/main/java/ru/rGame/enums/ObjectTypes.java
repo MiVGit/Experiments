@@ -18,8 +18,8 @@ public enum ObjectTypes {
     ARTIFACT("*", Color.LIGHTGOLDENRODYELLOW),
     BOSS("!",Color.BLUE);
 
-    String shape;
-    Color bg;
+    final String shape;
+    final Color bg;
 
     ObjectTypes(String shape, Color bg) {
         this.shape = shape;

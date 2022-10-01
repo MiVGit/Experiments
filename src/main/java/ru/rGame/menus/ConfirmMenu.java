@@ -8,7 +8,7 @@ import ru.rGame.Screen;
 import ru.rGame.objects.GameObject;
 
 public class ConfirmMenu extends  Menu{
-    private String title;
+    private final String title;
 
     public ConfirmMenu(GameObject object, String title) {
         super(RGame.SCREEN_WIDTH-11, 7);

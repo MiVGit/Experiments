@@ -7,7 +7,7 @@ import ru.rGame.objects.ItemObject;
 import ru.rGame.objects.Player;
 
 public class ItemActionMenu extends Menu implements Escapeable {
-    private ItemObject itemObject;
+    private final ItemObject itemObject;
 
     public ItemActionMenu(ItemObject itemObject) {
         super(RGame.SCREEN_WIDTH-11, 6);

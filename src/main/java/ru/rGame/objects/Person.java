@@ -47,7 +47,7 @@ public abstract class Person extends GameObject implements Fighter, Movable {
         damage = Balanser.basicDamage;
         if (inventory.armor != null) {
             armorStats[0] = inventory.armor.getStrength();
-            armorStats[1] = inventory.armor.getDextery();
+            armorStats[1] = inventory.armor.getDexterity();
             armorStats[2] = inventory.armor.getVitality();
             defence += inventory.armor.getDefence();
         }
